@@ -110,6 +110,49 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowRight') showNext();
     });
 
+    // ===== Testimonials Carousel =====
+    const track = document.getElementById('carouselTrack');
+    if (track) {
+        const cards = track.querySelectorAll('.testimonial-card');
+        const totalCards = cards.length;
+        let currentSlide = 0;
+
+        function getCardsPerView() {
+            return window.innerWidth <= 768 ? 1 : 2;
+        }
+
+        function updateCarousel() {
+            const cardsPerView = getCardsPerView();
+            const gap = window.innerWidth <= 768 ? 0 : 30;
+            const cardWidth = cards[0].offsetWidth + gap;
+            track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+        }
+
+        function slideNext() {
+            const cardsPerView = getCardsPerView();
+            const maxSlide = totalCards - cardsPerView;
+            currentSlide = currentSlide >= maxSlide ? 0 : currentSlide + 1;
+            updateCarousel();
+        }
+
+        function slidePrev() {
+            const cardsPerView = getCardsPerView();
+            const maxSlide = totalCards - cardsPerView;
+            currentSlide = currentSlide <= 0 ? maxSlide : currentSlide - 1;
+            updateCarousel();
+        }
+
+        document.querySelector('.carousel-arrow--right').addEventListener('click', slideNext);
+        document.querySelector('.carousel-arrow--left').addEventListener('click', slidePrev);
+
+        window.addEventListener('resize', () => {
+            const cardsPerView = getCardsPerView();
+            const maxSlide = totalCards - cardsPerView;
+            if (currentSlide > maxSlide) currentSlide = maxSlide;
+            updateCarousel();
+        });
+    }
+
     // ===== Active nav link highlighting =====
     const sections = document.querySelectorAll('section[id]');
 
