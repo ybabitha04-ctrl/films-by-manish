@@ -1187,6 +1187,60 @@ portfolio-item {
   text-decoration: none;
   transition: 0.3s ease;
 }
+/* Inner Hero */
+.inner-hero {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-overlay {
+  background: rgba(0,0,0,0.4);
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+.inner-overlay h1 {
+  font-size: 48px;
+  letter-spacing: 2px;
+}
+
+.inner-overlay p {
+  font-size: 16px;
+}
+
+/* Intro */
+.inner-intro {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
 
 .explore-btn:hover {
   background: #fff;
