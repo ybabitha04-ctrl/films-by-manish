@@ -32,17 +32,30 @@
 
 <!-- GALLERY -->
 <section class="wedding-gallery">
-  <div class="gallery-grid">
 
+  <!-- Row 1 (Hero Image) -->
+  <div class="gallery-row single">
     <img src="{{ url_for('serve_image', filename='DSC07526.jpg') }}">
+  </div>
+
+  <!-- Row 2 (2 Images) -->
+  <div class="gallery-row two">
     <img src="{{ url_for('serve_image', filename='DSC05195-2.jpg') }}">
     <img src="{{ url_for('serve_image', filename='DSC02893.jpg') }}">
+  </div>
+
+  <!-- Row 3 (3 Images) -->
+  <div class="gallery-row three">
     <img src="{{ url_for('serve_image', filename='DSC09580.jpg') }}">
     <img src="{{ url_for('serve_image', filename='MAX01368.jpg') }}">
-
-    <!-- Add more images same way -->
-
+    <img src="{{ url_for('serve_image', filename='DSC05195-2.jpg') }}">
   </div>
+
+  <!-- Row 4 (Hero Image) -->
+  <div class="gallery-row single">
+    <img src="{{ url_for('serve_image', filename='DSC02893.jpg') }}">
+  </div>
+
 </section>
 
 </body>
