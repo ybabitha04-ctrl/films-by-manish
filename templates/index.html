@@ -93,17 +93,19 @@
     </section>
 
     <!-- Portfolio Section -->
-  <!-- Portfolio Section -->
-<section class="portfolio" id="portfolio">
+  <section class="portfolio" id="portfolio">
+
   <div class="container">
     <h4 class="section-subtitle center">Our Work</h4>
     <h2 class="section-title center">Portfolio</h2>
     <div class="title-divider center"></div>
   </div>
 
-  <!-- Marriage -->
-  <div class="portfolio-block" style="background-image: url('{{ url_for('serve_image', filename='DSC07526.jpg') }}')">
-    <div class="portfolio-overlay">
+  <!-- Wedding -->
+  <div class="portfolio-block">
+    <img src="{{ url_for('serve_image', filename='wedding/hero.jpg') }}" class="portfolio-img">
+
+    <div class="portfolio-content">
       <h2>Marriage</h2>
       <p>
         Every wedding is a story of love, tradition, and emotion.<br>
@@ -113,9 +115,11 @@
     </div>
   </div>
 
-  <!-- Pre-Wedding -->
-  <div class="portfolio-block" style="background-image: url('{{ url_for('serve_image', filename='MAX01368.jpg') }}')">
-    <div class="portfolio-overlay">
+  <!-- Pre Wedding -->
+  <div class="portfolio-block">
+    <img src="{{ url_for('serve_image', filename='prewedding/hero.jpg') }}" class="portfolio-img">
+
+    <div class="portfolio-content">
       <h2>Pre-Wedding</h2>
       <p>
         Cinematic frames of your story before the forever begins.
@@ -125,51 +129,22 @@
   </div>
 
   <!-- Celebrations -->
-  <div class="portfolio-block" style="background-image: url('{{ url_for('serve_image', filename='DSC05195-2.jpg') }}')">
-    <div class="portfolio-overlay">
+  <div class="portfolio-block">
+    <img src="{{ url_for('serve_image', filename='celebrations/hero.jpg') }}" class="portfolio-img">
+
+    <div class="portfolio-content">
       <h2>Celebrations</h2>
       <p>
-        Every celebration is captured with joy, color, and raw emotion.
+        Every celebration captured with joy, color, and raw emotion.
       </p>
       <a href="/celebrations" target="_blank" class="explore-btn">Explore</a>
     </div>
   </div>
 
 </section>
-
-  <!-- Pre Wedding -->
-  <div class="portfolio-block">
-    <video autoplay muted loop playsinline class="portfolio-video">
-      <source src="{{ url_for('static', filename='videos/prewedding.mp4') }}" type="video/mp4">
-    </video>
-    <div class="portfolio-overlay">
-      <h2>Pre-Wedding</h2>
-      <p>
-        Before the vows, there are stories waiting to be told.  
-        Intimate, fun, and beautifully yours.
-      </p>
-      <a href="/prewedding" class="explore-btn">Explore</a>
-    </div>
-  </div>
-
-  <!-- Celebrations -->
-  <div class="portfolio-block">
-    <video autoplay muted loop playsinline class="portfolio-video">
-      <source src="{{ url_for('static', filename='videos/celebrations.mp4') }}" type="video/mp4">
-    </video>
-    <div class="portfolio-overlay">
-      <h2>Celebrations</h2>
-      <p>
-        Haldi, Sangeet, Reception — the energy, colors, and joy.  
-        Every celebration captured as it truly felt.
-      </p>
-      <a href="/celebrations" class="explore-btn">Explore</a>
-    </div>
-  </div>
-
-</section>
-       
-
+  
+ 
+  
 
     <!-- Parallax Break 2 -->
     <section class="parallax-break">
