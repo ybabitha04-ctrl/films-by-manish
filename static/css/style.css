@@ -1224,11 +1224,43 @@ portfolio-item {
 }
 
 /* Gallery */
-.gallery-grid {
+./* Wedding Story Gallery */
+.wedding-gallery {
+  padding: 40px 20px;
+}
+
+.gallery-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.gallery-row img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+/* Layout variations */
+.gallery-row.single {
+  grid-template-columns: 1fr;
+  height: 500px;
+}
+
+.gallery-row.two {
+  grid-template-columns: 1fr 1fr;
+  height: 400px;
+}
+
+.gallery-row.three {
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 350px;
+}
+
+/* Hover effect */
+.gallery-row img:hover {
+  transform: scale(1.03);
 }
 
 .gallery-grid img {
