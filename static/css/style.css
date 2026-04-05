@@ -1148,3 +1148,47 @@ portfolio-item {
   background: white;
   color: black;
 }
+.portfolio-block {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  max-width: 600px;
+  border-radius: 12px;
+}
+
+.portfolio-overlay h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.portfolio-overlay p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #fff;
+  color: #000;
+}
