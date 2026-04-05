@@ -1082,3 +1082,29 @@ a {
         font-size: 2.5rem;
     }
 }
+.side-icons {
+  position: fixed;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  z-index: 999;
+}
+
+.side-icons a {
+  font-size: 18px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 50%;
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+}
+
+.side-icons a:hover {
+  transform: scale(1.15);
+  background: white;
+  color: black;
+}
