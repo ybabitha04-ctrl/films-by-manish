@@ -1108,75 +1108,120 @@ a {
   background: white;
   color: black;
 }
-portfolio-item {
-  height: 400px;
+
+/* SECTION SPACING */
+
+
+
+
+
+/* ================= CLEAN PORTFOLIO ================= */
+
+.portfolio {
+  padding: 100px 0;
+}
+
+.portfolio-block {
   position: relative;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 40px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 120px auto;
 }
 
-.portfolio-item.wedding {
-  background-image: url('/static/images/wedding1.jpg'); /* change image later */
+.portfolio-img {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.6s ease;
 }
 
-.overlay {
+.portfolio-block:hover .portfolio-img {
+  transform: scale(1.04);
+}
+
+.portfolio-content {
   position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
+  bottom: 60px;
+  left: 60px;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
+  max-width: 500px;
+  animation: fadeUp 1s ease;
+}
+
+.portfolio-content h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.portfolio-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
 }
 
 .explore-btn {
-  margin-top: 15px;
-  padding: 10px 20px;
   border: 1px solid white;
+  padding: 10px 24px;
   text-decoration: none;
   color: white;
-  font-size: 12px;
-  letter-spacing: 2px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .explore-btn:hover {
   background: white;
   color: black;
 }
-.portfolio-block {
-  height: 90vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+/* ================= CLEAN GALLERY ================= */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 60px;
 }
 
-.portfolio-overlay {
-  background: rgba(0, 0, 0, 0.45);
-  padding: 40px;
-  text-align: center;
-  color: #fff;
-  max-width: 600px;
-  border-radius: 12px;
+.gallery-grid img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.4s ease;
 }
 
-.portfolio-overlay h2 {
-  font-size: 42px;
-  margin-bottom: 15px;
-  letter-spacing: 2px;
+.gallery-grid img:hover {
+  transform: translateY(-10px) scale(1.02);
 }
 
-.portfolio-overlay p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 20px;
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .portfolio-content {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .portfolio-content h2 {
+    font-size: 28px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .explore-btn {
@@ -1223,56 +1268,6 @@ portfolio-item {
   line-height: 1.8;
 }
 
-/* Gallery */
-./* Wedding Story Gallery */
-.wedding-gallery {
-  padding: 40px 20px;
-}
-
-.gallery-row {
-  display: grid;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.gallery-row img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.4s ease;
-}
-
-/* Layout variations */
-.gallery-row.single {
-  grid-template-columns: 1fr;
-  height: 500px;
-}
-
-.gallery-row.two {
-  grid-template-columns: 1fr 1fr;
-  height: 400px;
-}
-
-.gallery-row.three {
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 350px;
-}
-
-/* Hover effect */
-.gallery-row img:hover {
-  transform: scale(1.03);
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  transition: 0.4s ease;
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.05);
-}
 
 .explore-btn:hover {
   background: #fff;
