@@ -1108,3 +1108,43 @@ a {
   background: white;
   color: black;
 }
+portfolio-item {
+  height: 400px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 40px;
+}
+
+.portfolio-item.wedding {
+  background-image: url('/static/images/wedding1.jpg'); /* change image later */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.explore-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.explore-btn:hover {
+  background: white;
+  color: black;
+}
