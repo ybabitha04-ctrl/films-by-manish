@@ -1571,3 +1571,203 @@ a {
     color: white;
     text-align: center;
 }
+
+/* ================= HERO FIX ================= */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.1);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+.hero-center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text-wrapper {
+    text-align: center;
+    margin-top: 60px; /* fixes overlap */
+}
+
+.hero-subtitle {
+    letter-spacing: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 80px;
+}
+
+.hero-tagline {
+    margin: 20px 0;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #c9a96e;
+    color: #c9a96e;
+    text-decoration: none;
+}
+
+/* ================= PORTFOLIO FIX ================= */
+
+.portfolio-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.portfolio-item {
+    position: relative;
+    height: 100vh;
+    object-fit: contain;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: rgba(0,0,0,0.3);
+}
+
+.portfolio-text {
+    text-align: center;
+}
+
+.portfolio-text h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.portfolio-btn {
+    border: 1px solid white;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+/* ================= PARALLAX SECTION ================= */
+
+.parallax-break {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: 40%;
+}
+
+/* ================= TESTIMONIAL MOBILE FIX ================= */
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        width: 90% !important;
+        margin: auto;
+        text-align: center;
+    }
+
+    .carousel-arrow {
+        bottom: 10px;
+    }
+}
+
+/* ================= CONTACT FIX ================= */
+
+.contact-grid {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-image {
+    flex: 1;
+}
+
+.contact-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ================= GALLERY (NO CROPPING) ================= */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* IMPORTANT */
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .portfolio-item {
+        height: 60vh;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+    }
+
+}
