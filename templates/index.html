@@ -48,27 +48,29 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-parallax" style="background-image: url('{{ url_for('serve_image', filename='DSC07526.jpg') }}')"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="hero-subtitle">Welcome to</p>
-            <h1 class="hero-title">Films by Manish</h1>
-            <div class="hero-divider"></div>
-            <p class="hero-tagline">Crafting Timeless Memories</p>
-            <a href="#portfolio" class="hero-btn">View Portfolio</a>
-        </div>
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
-    </section>
+<section class="hero" id="home">
+    <div class="hero-parallax" style="background-image: url('{{ url_for('static', filename='images/home/home-hero.jpg') }}')"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <p class="hero-subtitle">Welcome to</p>
+        <h1 class="hero-title">Films by Manish</h1>
+        <div class="hero-divider"></div>
+        <p class="hero-tagline">Crafting Timeless Memories</p>
+        <a href="#portfolio" class="hero-btn">View Portfolio</a>
+    </div>
+
+    <div class="scroll-indicator">
+        <span></span>
+    </div>
+</section>
 
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="{{ url_for('serve_image', filename='MAX01368.jpg') }}" alt="Wedding couple" loading="lazy">
+                 <img src="{{ url_for('static', filename='images/sections/about.jpg') }}">
                 </div>
                 <div class="about-text">
                     <h4 class="section-subtitle">Our Story</h4>
@@ -82,16 +84,7 @@
         </div>
     </section>
 
-    <!-- Parallax Break -->
-    <section class="parallax-break">
-        <div class="parallax-bg" style="background-image: url('{{ url_for('serve_image', filename='DSC05195-2.jpg') }}')"></div>
-        <div class="parallax-overlay"></div>
-        <div class="parallax-content">
-            <h2>Every Love Story is Beautiful</h2>
-            <p>But yours deserves to be told</p>
-        </div>
-    </section>
-
+    
     <!-- Portfolio Section -->
   <section class="portfolio" id="portfolio">
 
@@ -101,59 +94,51 @@
     <div class="title-divider center"></div>
   </div>
 
-  <!-- Wedding -->
-  <div class="portfolio-block">
-    <img src="{{ url_for('serve_image', filename='wedding/hero.jpg') }}" class="portfolio-img">
+  <div class="portfolio-grid">
 
-    <div class="portfolio-content">
-      <h2>Marriage</h2>
-      <p>
-        Every wedding is a story of love, tradition, and emotion.<br>
-        We capture the moments you feel, not just the ones you see.
-      </p>
-      <a href="/wedding" target="_blank" class="explore-btn">Explore</a>
+    <!-- Marriage -->
+    <div class="portfolio-item">
+      <img src="{{ url_for('static', filename='images/portfolio/marriage.jpg') }}">
+      <div class="portfolio-overlay">
+        <h2>Marriage</h2>
+        <a href="/marriage" target="_blank">Explore</a>
+      </div>
     </div>
-  </div>
 
-  <!-- Pre Wedding -->
-  <div class="portfolio-block">
-    <img src="{{ url_for('serve_image', filename='prewedding/hero.jpg') }}" class="portfolio-img">
-
-    <div class="portfolio-content">
-      <h2>Pre-Wedding</h2>
-      <p>
-        Cinematic frames of your story before the forever begins.
-      </p>
-      <a href="/prewedding" target="_blank" class="explore-btn">Explore</a>
+    <!-- Pre Wedding -->
+    <div class="portfolio-item">
+      <img src="{{ url_for('static', filename='images/portfolio/prewedding.jpg') }}">
+      <div class="portfolio-overlay">
+        <h2>Pre-Wedding</h2>
+        <a href="/prewedding" target="_blank">Explore</a>
+      </div>
     </div>
-  </div>
 
-  <!-- Celebrations -->
-  <div class="portfolio-block">
-    <img src="{{ url_for('serve_image', filename='celebrations/hero.jpg') }}" class="portfolio-img">
-
-    <div class="portfolio-content">
-      <h2>Celebrations</h2>
-      <p>
-        Every celebration captured with joy, color, and raw emotion.
-      </p>
-      <a href="/celebrations" target="_blank" class="explore-btn">Explore</a>
+    <!-- Celebrations -->
+    <div class="portfolio-item">
+      <img src="{{ url_for('static', filename='images/portfolio/celebrations.jpg') }}">
+      <div class="portfolio-overlay">
+        <h2>Celebrations</h2>
+        <a href="/celebrations" target="_blank">Explore</a>
+      </div>
     </div>
+
   </div>
 
 </section>
-  
- 
+   
   
 
     <!-- Parallax Break 2 -->
     <section class="parallax-break">
-        <div class="parallax-bg" style="background-image: url('{{ url_for('serve_image', filename='DSC02893.jpg') }}')"></div>
-        <div class="parallax-overlay"></div>
-        <div class="parallax-content">
-            <h2>Crafting Timeless Memories</h2>
-        </div>
-    </section>
+    <div class="parallax-bg" style="background-image: url('{{ url_for('static', filename='images/sections/timeless.jpg') }}')"></div>
+    <div class="parallax-overlay"></div>
+
+    <div class="parallax-content">
+        <h2>Crafting Timeless Memories</h2>
+        <p>Every frame tells a story that lives forever.</p>
+    </div>
+</section>
 
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
@@ -243,37 +228,57 @@
                     <p class="contact-desc">We'd love to hear about your special day. Reach out to us and let's create something beautiful together.</p>
 
                     <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            </div>
-                            <div>
-                                <h5>Address</h5>
-                                <p>Vasu Heights, 1st floor, Hi-tension Road,<br>Kapra Rd, near Vijaya High School Road,<br>A. S. Rao Nagar, Hyderabad,<br>Telangana 500062</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            </div>
-                            <div>
-                                <h5>Phone</h5>
-                                <p><a href="tel:+918019602542">080196 02542</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                            </div>
-                            <div>
-                                <h5>Instagram</h5>
-                                <p><a href="https://www.instagram.com/filmsbymanish/" target="_blank" rel="noopener noreferrer">@filmsbymanish</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+    <!-- Phone -->
+    <div class="contact-item">
+        <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+        </div>
+        <div>
+            <h5>Phone</h5>
+            <p><a href="tel:+918019602542">080196 02542</a></p>
+        </div>
+    </div>
+
+    <!-- Instagram -->
+    <div class="contact-item">
+        <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+        </div>
+        <div>
+            <h5>Instagram</h5>
+            <p><a href="https://www.instagram.com/filmsbymanish/" target="_blank">@filmsbymanish</a></p>
+        </div>
+    </div>
+
+    <!-- Address -->
+    <div class="contact-item">
+        <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+        </div>
+        <div>
+            <h5>Address</h5>
+            <p>
+                Vasu Heights, 1st floor, Hi-tension Road,<br>
+                Kapra Rd, near Vijaya High School Road,<br>
+                A. S. Rao Nagar, Hyderabad,<br>
+                Telangana 500062
+            </p>
+        </div>
+    </div>
+
+</div>
                 <div class="contact-image">
-                    <img src="{{ url_for('serve_image', filename='DSC09580.jpg') }}" alt="Wedding portrait" loading="lazy">
+                    <img src="{{ url_for('static', filename='images/sections/contact.jpg') }}" alt="Wedding portrait" loading="lazy">
                 </div>
             </div>
         </div>
