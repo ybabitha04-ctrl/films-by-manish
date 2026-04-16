@@ -1,13 +1,10 @@
-from flask import Flask, render_template, send_from_directory
-import os
+from flask import Flask, render_template
+from whitenoise import WhiteNoise
 
 app = Flask(__name__)
 
-# Force static serving
-@app.route('/static/<path:filename>')
-def static_files(filename):
-    return send_from_directory(os.path.join(os.getcwd(), 'static'), filename)
-
+# Enable static files in production
+app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/", prefix="static/")
 
 @app.route('/')
 def index():
@@ -24,7 +21,6 @@ def prewedding():
 @app.route('/celebrations')
 def celebrations():
     return render_template('celebrations.html')
-
 
 if __name__ == '__main__':
     app.run(debug=True)
