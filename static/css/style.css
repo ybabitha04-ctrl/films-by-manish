@@ -1412,6 +1412,161 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    /* ================= FINAL FIXES (DO NOT MODIFY ABOVE CODE) ================= */
+
+
+/* ===== HERO FIX ===== */
+
+.hero {
+    height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-parallax {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 80px; /* FIX HEADER OVERLAP */
+}
+
+.hero-text-wrapper {
+    text-align: center;
+}
+
+
+/* ===== PORTFOLIO FIX (REMOVE GRID COMPLETELY) ===== */
+
+.portfolio,
+.portfolio-grid {
+    display: block !important;
+}
+
+.portfolio-item {
+    position: relative;
+    width: 100%;
+    height: 100vh !important;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXT CENTER + VISIBILITY */
+
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,0.3);
+}
+
+.portfolio-text {
+    text-align: center;
+}
+
+.portfolio-text h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* EXPLORE BUTTON */
+
+.portfolio-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid white;
+    color: white;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+.portfolio-btn:hover {
+    background: white;
+    color: black;
+}
+
+
+/* ===== TIMELESS FULL SCREEN ===== */
+
+.parallax-break {
+    height: 100vh !important;
+}
+
+.parallax-bg {
+    background-size: cover !important;
+}
+
+
+/* ===== TESTIMONIAL MOBILE FIX ===== */
+
+@media (max-width: 768px) {
+
+    .testimonial-card {
+        flex: 0 0 100% !important;
+        padding: 25px;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .carousel-arrow {
+        display: none; /* REMOVE arrows on mobile */
+    }
+}
+
+
+/* ===== CONTACT FIX (IMAGE RIGHT SIDE) ===== */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+/* ===== MOBILE CONTACT FIX ===== */
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
     
     color: white;
     text-align: center;
