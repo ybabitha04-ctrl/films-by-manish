@@ -1,10 +1,14 @@
 from flask import Flask, render_template
 from whitenoise import WhiteNoise
+import os
 
 app = Flask(__name__)
 
-# Serve static files in production
-app.wsgi_app = WhiteNoise(app.wsgi_app, root="static", prefix="static/")
+# Proper static path
+static_dir = os.path.join(os.path.dirname(__file__), 'static')
+
+# Attach WhiteNoise correctly
+app.wsgi_app = WhiteNoise(app.wsgi_app, root=static_dir, prefix='static/')
 
 @app.route('/')
 def index():
