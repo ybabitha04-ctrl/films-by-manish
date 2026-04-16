@@ -3,8 +3,8 @@ from whitenoise import WhiteNoise
 
 app = Flask(__name__)
 
-# Enable static files in production
-app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/", prefix="static/")
+# Serve static files in production
+app.wsgi_app = WhiteNoise(app.wsgi_app, root="static", prefix="static/")
 
 @app.route('/')
 def index():
