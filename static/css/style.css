@@ -1285,3 +1285,21 @@ a {
   background: #fff;
   color: #000;
 }
+/* HERO FULL IMAGE FIX */
+
+.hero {
+    height: 200vh; /* allows scroll */
+    position: relative;
+}
+
+.hero-parallax {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+
+    background-size: contain; /* THIS FIXES CROPPING */
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: black; /* fills empty sides nicely */
+}
