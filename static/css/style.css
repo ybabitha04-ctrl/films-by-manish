@@ -158,23 +158,21 @@ a {
 
 /* ===== Hero ===== */
 .hero {
+    height: 100vh; /* reset */
     position: relative;
-    height: 100vh;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
 }
 
-.hero-parallax{
+.hero-parallax {
     position: absolute;
-    inset: -20%;
-    background-size: cover;
-    background-position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-size: contain; /* no crop */
     background-repeat: no-repeat;
-    will-change: transform;
-    animation: zoomSlow 14s ease-in-out infinite alternate;
+    background-position: center;
+    background-color: black;
 }
 
 .hero-overlay {
