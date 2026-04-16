@@ -1,7 +1,13 @@
 from flask import Flask, render_template, send_from_directory
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', static_url_path='/static')
+from flask import send_from_directory
+import os
+
+@app.route('/static/<path:filename>')
+def static_files(filename):
+    return send_from_directory(os.path.join(app.root_path, 'static'), filename)
 
 IMAGES_DIR = os.path.join(os.path.dirname(__file__), 'images', 'pictures')
 
