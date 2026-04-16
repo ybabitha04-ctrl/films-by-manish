@@ -3,10 +3,13 @@ import os
 
 app = Flask(__name__)
 
-# FIX: Serve static files manually
+# Absolute path to static folder
+STATIC_DIR = os.path.join(os.path.dirname(__file__), 'static')
+
+# Serve static files manually
 @app.route('/static/<path:filename>')
 def static_files(filename):
-    return send_from_directory(os.path.join(os.getcwd(), 'static'), filename)
+    return send_from_directory(STATIC_DIR, filename)
 
 @app.route('/')
 def index():
