@@ -1,33 +1,22 @@
-from flask import Flask, render_template, send_from_directory
-import os
+from flask import Flask, render_template
 
-app = Flask(__name__, static_folder='static', static_url_path='/static')
-from flask import send_from_directory
-import os
-
-@app.route('/static/<path:filename>')
-def static_files(filename):
-    return send_from_directory(os.path.join(app.root_path, 'static'), filename)
-
-IMAGES_DIR = os.path.join(os.path.dirname(__file__), 'images', 'pictures')
-
+app = Flask(__name__)
 
 @app.route('/')
 def index():
-    images = sorted([
-        f for f in os.listdir(IMAGES_DIR)
-        if f.lower().endswith(('.jpg', '.jpeg', '.png', '.webp'))
-    ])
-    return render_template('index.html', images=images)
+    return render_template('index.html')
 
+@app.route('/marriage')
+def marriage():
+    return render_template('marriage.html')
 
-@app.route('/images/pictures/<path:filename>')
-def serve_image(filename):
-    return send_from_directory(IMAGES_DIR, filename)
+@app.route('/prewedding')
+def prewedding():
+    return render_template('prewedding.html')
 
+@app.route('/celebrations')
+def celebrations():
+    return render_template('celebrations.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
-@app.route("/wedding")
-def wedding():
-    return render_template("wedding.html")
+    app.run(debug=True)
