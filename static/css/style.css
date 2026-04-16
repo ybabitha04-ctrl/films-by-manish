@@ -1301,3 +1301,93 @@ a {
 
     background-color: black; /* fills empty sides nicely */
 }
+/* ============================= */
+/* HERO FULL SCREEN FIX */
+/* ============================= */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ============================= */
+/* TIMELLESS FULL SCREEN */
+/* ============================= */
+
+.parallax-break {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ============================= */
+/* PORTFOLIO FIX */
+/* ============================= */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.portfolio-item {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* IMPORTANT */
+}
+
+/* Overlay center fix */
+.portfolio-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    text-align: center;
+    color: white;
+}
+
+/* ============================= */
+/* ABOUT + CONTACT POP ANIMATION */
+/* ============================= */
+
+.about-image img,
+.contact-image img {
+    width: 100%;
+    transition: transform 0.6s ease;
+}
+
+.about-image img:hover,
+.contact-image img:hover {
+    transform: scale(1.05);
+}
