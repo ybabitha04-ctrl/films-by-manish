@@ -1,14 +1,12 @@
-from flask import Flask, render_template
-from whitenoise import WhiteNoise
+from flask import Flask, render_template, send_from_directory
 import os
 
 app = Flask(__name__)
 
-# Proper static path
-static_dir = os.path.join(os.path.dirname(__file__), 'static')
-
-# Attach WhiteNoise correctly
-app.wsgi_app = WhiteNoise(app.wsgi_app, root=static_dir, prefix='static/')
+# FIX: Serve static files manually
+@app.route('/static/<path:filename>')
+def static_files(filename):
+    return send_from_directory(os.path.join(os.getcwd(), 'static'), filename)
 
 @app.route('/')
 def index():
