@@ -1831,3 +1831,122 @@ a {
     width: 100%;
 }
 
+/* ===== KEEP YOUR ORIGINAL FILE ABOVE THIS LINE ===== */
+
+/* ================= FINAL CLEAN FIXES ================= */
+
+/* ===== SPACING FIX ===== */
+.about,
+.portfolio,
+.testimonials,
+.contact,
+.instagram-cta {
+padding: 80px 0 !important;
+}
+
+.section-title.center {
+margin-bottom: 10px;
+}
+
+.title-divider.center {
+margin-bottom: 30px;
+}
+
+.parallax-break {
+margin-bottom: 0 !important;
+}
+
+/* ===== TIMELLESS CENTER FIX ===== */
+.parallax-content {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+}
+
+/* ===== PORTFOLIO FINAL CLEAN (NO CONFLICTS) ===== */
+
+.portfolio,
+.portfolio-grid,
+.portfolio-wrapper {
+display: block !important;
+}
+
+.portfolio-item {
+position: relative;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+}
+
+.portfolio-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* overlay FULL CENTER */
+.portfolio-overlay {
+position: absolute;
+inset: 0;
+
+```
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: rgba(0,0,0,0.35);
+```
+
+}
+
+/* TEXT CENTER */
+.portfolio-text {
+text-align: center;
+color: white;
+width: 100%;
+}
+
+.portfolio-text h2 {
+font-size: 42px;
+margin-bottom: 10px;
+}
+
+/* BUTTON */
+.portfolio-btn {
+display: inline-block;
+padding: 12px 30px;
+border: 1px solid white;
+color: white;
+margin-top: 10px;
+transition: 0.3s ease;
+}
+
+.portfolio-btn:hover {
+background: white;
+color: black;
+}
+
+/* ===== REMOVE LEFT SHIFT ISSUE ===== */
+.portfolio-content {
+left: 50% !important;
+transform: translateX(-50%) !important;
+text-align: center !important;
+}
+
+/* ===== MOBILE SAFE ===== */
+@media (max-width: 768px) {
+
+```
+.portfolio-item {
+    height: 60vh;
+}
+
+.portfolio-text h2 {
+    font-size: 28px;
+}
+```
+
+}
+
+
