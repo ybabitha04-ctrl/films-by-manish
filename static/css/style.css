@@ -1876,3 +1876,47 @@ a {
     display: inline-block !important;
     margin-top: 10px !important;
 }
+/* ===== ISOLATED PORTFOLIO (NO CONFLICT) ===== */
+
+.portfolio-clean {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.p-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,0.35);
+    color: white;
+    text-align: center;
+}
+
+.p-overlay h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.p-overlay a {
+    border: 1px solid white;
+    padding: 10px 24px;
+    color: white;
+    text-decoration: none;
+}
