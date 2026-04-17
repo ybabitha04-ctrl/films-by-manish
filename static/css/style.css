@@ -1701,8 +1701,14 @@ a {
 .parallax-content {
     position: relative;
     z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
     text-align: center;
-    top: 40%;
 }
 
 /* ================= TESTIMONIAL MOBILE FIX ================= */
@@ -1770,4 +1776,30 @@ a {
         flex-direction: column;
     }
 
+}
+
+.portfolio-content {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+}
+
+.about,
+.portfolio,
+.testimonials,
+.contact,
+.instagram-cta {
+    padding: 80px 0 !important;
+}
+
+.section-title.center {
+    margin-bottom: 10px;
+}
+
+.title-divider.center {
+    margin-bottom: 30px;
+}
+
+.parallax-break {
+    margin-bottom: 0 !important;
 }
