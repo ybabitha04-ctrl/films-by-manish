@@ -1948,5 +1948,80 @@ text-align: center !important;
 ```
 
 }
+/* ================= FINAL PORTFOLIO FIX (CLEAN OVERRIDE) ================= */
 
+/* Disable all conflicting layouts */
+.portfolio-grid,
+.portfolio-wrapper,
+.portfolio-block {
+    display: block !important;
+}
+
+/* Each section full screen */
+.portfolio-item {
+    position: relative;
+    width: 100%;
+    height: 100vh !important;
+    overflow: hidden;
+}
+
+/* Image full without weird crop */
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+}
+
+/* Overlay PERFECT CENTER */
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: rgba(0,0,0,0.35);
+}
+
+/* TEXT CENTER */
+.portfolio-text {
+    text-align: center !important;
+    width: 100%;
+    color: white;
+}
+
+/* REMOVE LEFT SHIFT ISSUE */
+.portfolio-content {
+    position: absolute;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 50px;
+    text-align: center !important;
+}
+
+/* BUTTON */
+.portfolio-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid white;
+    color: white;
+    margin-top: 10px;
+}
+
+.portfolio-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .portfolio-item {
+        height: 60vh !important;
+    }
+
+    .portfolio-text h2 {
+        font-size: 28px;
+    }
+}
 
