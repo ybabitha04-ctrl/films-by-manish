@@ -2024,4 +2024,42 @@ text-align: center !important;
         font-size: 28px;
     }
 }
+/* ================= FINAL FIX FOR YOUR ACTUAL PORTFOLIO ================= */
 
+.portfolio-block {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 120px auto;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 100vh !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+}
+
+/* CENTER TEXT PROPERLY */
+.portfolio-content {
+    position: absolute;
+
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+
+    text-align: center !important;
+    max-width: 600px;
+}
+
+/* REMOVE LEFT SHIFT */
+.portfolio-content p,
+.portfolio-content h2 {
+    text-align: center;
+}
+
+/* BUTTON CENTER */
+.explore-btn {
+    display: inline-block;
+    margin-top: 15px;
+}
