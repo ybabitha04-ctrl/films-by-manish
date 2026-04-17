@@ -17,31 +17,52 @@
         h1 {
             text-align: center;
             color: white;
-            padding: 20px 0;
+            padding: 30px 0;
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            padding: 20px;
+        /* ===== GALLERY ===== */
+
+        .gallery-container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding-bottom: 40px;
         }
 
-        .gallery img {
+        .gallery-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .gallery-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .gallery-img.large {
+            flex: 2;
+        }
+
+        .gallery-img.small {
+            flex: 1;
+        }
+
+        .gallery-img img {
             width: 100%;
-            height: 320px;
-            object-fit: cover;
+            height: auto;
+            object-fit: contain; /* NO CROPPING */
+            border-radius: 10px;
         }
+
+        /* ===== MOBILE ===== */
 
         @media (max-width: 768px) {
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery img {
-                height: auto;
+            .gallery-row {
+                flex-direction: column !important;
             }
         }
+
     </style>
 </head>
 
@@ -49,27 +70,58 @@
 
 <h1>Pre-Wedding Stories</h1>
 
-<div class="gallery">
+<section class="gallery">
 
-<img src="/static/images/portfolio/prewedding/p1.jpg">
-<img src="/static/images/portfolio/prewedding/p2.jpg">
-<img src="/static/images/portfolio/prewedding/p3.jpg">
-<img src="/static/images/portfolio/prewedding/p4.jpg">
-<img src="/static/images/portfolio/prewedding/p5.jpg">
-<img src="/static/images/portfolio/prewedding/p6.jpg">
-<img src="/static/images/portfolio/prewedding/p7.jpg">
-<img src="/static/images/portfolio/prewedding/p8.jpg">
-<img src="/static/images/portfolio/prewedding/p9.jpg">
-<img src="/static/images/portfolio/prewedding/p10.jpg">
-<img src="/static/images/portfolio/prewedding/p11.jpg">
-<img src="/static/images/portfolio/prewedding/p12.jpg">
-<img src="/static/images/portfolio/prewedding/p13.jpg">
-<img src="/static/images/portfolio/prewedding/p14.jpg">
-<img src="/static/images/portfolio/prewedding/p15.jpg">
-<img src="/static/images/portfolio/prewedding/p16.jpg">
-<img src="/static/images/portfolio/prewedding/p17.jpg">
+    <div class="gallery-container">
 
-</div>
+        <div class="gallery-row">
+            <div class="gallery-img large"><img src="/static/images/portfolio/prewedding/p1.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/prewedding/p2.jpg"></div>
+        </div>
+
+        <div class="gallery-row reverse">
+            <div class="gallery-img large"><img src="/static/images/portfolio/prewedding/p3.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/prewedding/p4.jpg"></div>
+        </div>
+
+        <div class="gallery-row">
+            <div class="gallery-img large"><img src="/static/images/portfolio/prewedding/p5.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/prewedding/p6.jpg"></div>
+        </div>
+
+        <div class="gallery-row reverse">
+            <div class="gallery-img large"><img src="/static/images/portfolio/prewedding/p7.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/prewedding/p8.jpg"></div>
+        </div>
+
+        <div class="gallery-row">
+            <div class="gallery-img large"><img src="/static/images/portfolio/prewedding/p9.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/prewedding/p10.jpg"></div>
+        </div>
+
+        <div class="gallery-row reverse">
+            <div class="gallery-img large"><img src="/static/images/portfolio/prewedding/p11.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/prewedding/p12.jpg"></div>
+        </div>
+
+        <div class="gallery-row">
+            <div class="gallery-img large"><img src="/static/images/portfolio/prewedding/p13.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/prewedding/p14.jpg"></div>
+        </div>
+
+        <div class="gallery-row reverse">
+            <div class="gallery-img large"><img src="/static/images/portfolio/prewedding/p15.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/prewedding/p16.jpg"></div>
+        </div>
+
+        <!-- LAST IMAGE FULL -->
+        <div class="gallery-row">
+            <div class="gallery-img large"><img src="/static/images/portfolio/prewedding/p17.jpg"></div>
+        </div>
+
+    </div>
+
+</section>
 
 </body>
 </html>
