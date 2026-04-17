@@ -1923,3 +1923,7 @@ a {
 .p-item:nth-child(2) img {
     object-position: center 30%;
 }
+.prewedding-img {
+    object-fit: contain !important;
+    background: black;
+}
