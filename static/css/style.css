@@ -1803,3 +1803,31 @@ a {
 .parallax-break {
     margin-bottom: 0 !important;
 }
+.portfolio-item {
+    width: 100% !important;
+    height: 100vh !important;
+}
+
+.portfolio-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio-text {
+    text-align: center;
+    width: 100%;
+}
+
