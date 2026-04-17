@@ -1,239 +1,234 @@
-/* ===== RESET ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ===== BASE ===== */
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #0a0a0a;
-    color: #eee;
+    background:#0a0a0a;
+    color:#eee;
 }
 
-/* ===== CONTAINER ===== */
 .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
 }
 
-/* ===== NAVBAR ===== */
+/* ===== NAV ===== */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
 }
 
 /* ===== HERO ===== */
 .hero {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
+    position:relative;
+    height:100vh;
+    overflow:hidden;
 }
 
 .hero-parallax {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
 }
 
 .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.5);
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding-top: 80px;
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding-top:90px;
 }
 
 .hero-text-wrapper {
-    text-align: center;
+    text-align:center;
 }
 
 .hero-title {
-    font-size: 70px;
-    color: white;
+    font-family:'Cormorant Garamond', serif;
+    font-size:70px;
+    letter-spacing:3px;
 }
 
 .hero-tagline {
-    margin-top: 10px;
-    color: #ccc;
-}
-
-.hero-btn {
-    margin-top: 20px;
-    display: inline-block;
-    border: 1px solid #c9a96e;
-    padding: 10px 25px;
-    color: #c9a96e;
+    font-style:italic;
+    margin-top:10px;
+    color:#ccc;
 }
 
 /* ===== ABOUT ===== */
 .about {
-    padding: 80px 0;
+    padding:100px 0;
 }
 
 .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
 }
 
 .about-image img {
-    width: 100%;
+    width:100%;
+    height:500px;
+    object-fit:cover;
 }
 
 /* ===== PORTFOLIO ===== */
 .portfolio {
-    padding: 80px 0;
+    padding:100px 0;
 }
 
 .portfolio-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+    display:flex;
+    flex-direction:column;
+    gap:80px;
 }
 
 .portfolio-item {
-    position: relative;
-    height: 100vh;
+    position:relative;
+    height:100vh;
 }
 
 .portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
 .portfolio-overlay {
-    position: absolute;
-    inset: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: rgba(0,0,0,0.4);
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,0.35);
 }
 
 .portfolio-text {
-    text-align: center;
+    text-align:center;
 }
 
 .portfolio-text h2 {
-    font-size: 40px;
+    font-size:42px;
 }
 
 .portfolio-btn {
-    border: 1px solid white;
-    padding: 8px 20px;
-    color: white;
+    margin-top:10px;
+    border:1px solid white;
+    padding:10px 24px;
+    color:white;
 }
 
 /* ===== TIMELESS ===== */
 .parallax-break {
-    position: relative;
-    height: 100vh;
+    position:relative;
+    height:100vh;
 }
 
 .parallax-bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
+    position:absolute;
+    inset:0;
+    background-size:cover;
 }
 
 .parallax-content {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+    text-align:center;
 }
 
 /* ===== TESTIMONIALS ===== */
 .testimonials {
-    padding: 80px 0;
+    padding:100px 0;
 }
 
 .testimonials-carousel {
-    display: flex;
-    align-items: center;
+    display:flex;
+    align-items:center;
 }
 
 .carousel-track-wrapper {
-    overflow: hidden;
-    flex: 1;
+    overflow:hidden;
+    flex:1;
 }
 
 .carousel-track {
-    display: flex;
-    gap: 20px;
+    display:flex;
+    gap:20px;
 }
 
 .testimonial-card {
-    flex: 0 0 48%;
-    padding: 30px;
-    border: 1px solid #333;
-    text-align: center;
+    flex:0 0 48%;
+    padding:40px;
+    border:1px solid #333;
+    text-align:center;
 }
 
 .carousel-arrow {
-    width: 50px;
-    height: 50px;
-    border: 1px solid #c9a96e;
-    color: #c9a96e;
+    width:50px;
+    height:50px;
+    border:1px solid #c9a96e;
+    color:#c9a96e;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 /* ===== CONTACT ===== */
 .contact {
-    padding: 80px 0;
+    padding:100px 0;
 }
 
 .contact-grid {
-    display: flex;
-    gap: 40px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
 }
 
 .contact-image img {
-    width: 100%;
+    width:100%;
+    height:500px;
+    object-fit:cover;
 }
 
 /* ===== MOBILE ===== */
-@media (max-width: 768px) {
+@media(max-width:768px){
 
     .hero-title {
-        font-size: 36px;
+        font-size:36px;
     }
 
     .about-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:1fr;
     }
 
     .portfolio-item {
-        height: 60vh;
+        height:60vh;
     }
 
     .testimonial-card {
-        flex: 0 0 100%;
+        flex:0 0 100%;
     }
 
     .carousel-arrow {
-        display: none;
+        display:none;
     }
 
     .contact-grid {
-        flex-direction: column;
+        grid-template-columns:1fr;
     }
 }
