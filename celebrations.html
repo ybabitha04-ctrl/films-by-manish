@@ -17,31 +17,52 @@
         h1 {
             text-align: center;
             color: white;
-            padding: 20px 0;
+            padding: 30px 0;
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            padding: 20px;
+        /* ===== GALLERY ===== */
+
+        .gallery-container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding-bottom: 40px;
         }
 
-        .gallery img {
+        .gallery-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .gallery-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .gallery-img.large {
+            flex: 2;
+        }
+
+        .gallery-img.small {
+            flex: 1;
+        }
+
+        .gallery-img img {
             width: 100%;
-            height: 320px;
-            object-fit: cover;
+            height: auto;
+            object-fit: contain; /* NO CROPPING */
+            border-radius: 10px;
         }
+
+        /* ===== MOBILE ===== */
 
         @media (max-width: 768px) {
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery img {
-                height: auto;
+            .gallery-row {
+                flex-direction: column !important;
             }
         }
+
     </style>
 </head>
 
@@ -49,29 +70,63 @@
 
 <h1>Celebrations</h1>
 
-<div class="gallery">
+<section class="gallery">
 
-<img src="/static/images/portfolio/celebrations/c1.jpg">
-<img src="/static/images/portfolio/celebrations/c2.jpg">
-<img src="/static/images/portfolio/celebrations/c3.jpg">
-<img src="/static/images/portfolio/celebrations/c4.jpg">
-<img src="/static/images/portfolio/celebrations/c5.jpg">
-<img src="/static/images/portfolio/celebrations/c6.jpg">
-<img src="/static/images/portfolio/celebrations/c7.jpg">
-<img src="/static/images/portfolio/celebrations/c8.jpg">
-<img src="/static/images/portfolio/celebrations/c9.jpg">
-<img src="/static/images/portfolio/celebrations/c10.jpg">
-<img src="/static/images/portfolio/celebrations/c11.jpg">
-<img src="/static/images/portfolio/celebrations/c12.jpg">
-<img src="/static/images/portfolio/celebrations/c13.jpg">
-<img src="/static/images/portfolio/celebrations/c14.jpg">
-<img src="/static/images/portfolio/celebrations/c15.jpg">
-<img src="/static/images/portfolio/celebrations/c16.jpg">
-<img src="/static/images/portfolio/celebrations/c17.jpg">
-<img src="/static/images/portfolio/celebrations/c18.jpg">
-<img src="/static/images/portfolio/celebrations/c19.jpg">
+    <div class="gallery-container">
 
-</div>
+        <div class="gallery-row">
+            <div class="gallery-img large"><img src="/static/images/portfolio/celebrations/c1.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/celebrations/c2.jpg"></div>
+        </div>
+
+        <div class="gallery-row reverse">
+            <div class="gallery-img large"><img src="/static/images/portfolio/celebrations/c3.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/celebrations/c4.jpg"></div>
+        </div>
+
+        <div class="gallery-row">
+            <div class="gallery-img large"><img src="/static/images/portfolio/celebrations/c5.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/celebrations/c6.jpg"></div>
+        </div>
+
+        <div class="gallery-row reverse">
+            <div class="gallery-img large"><img src="/static/images/portfolio/celebrations/c7.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/celebrations/c8.jpg"></div>
+        </div>
+
+        <div class="gallery-row">
+            <div class="gallery-img large"><img src="/static/images/portfolio/celebrations/c9.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/celebrations/c10.jpg"></div>
+        </div>
+
+        <div class="gallery-row reverse">
+            <div class="gallery-img large"><img src="/static/images/portfolio/celebrations/c11.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/celebrations/c12.jpg"></div>
+        </div>
+
+        <div class="gallery-row">
+            <div class="gallery-img large"><img src="/static/images/portfolio/celebrations/c13.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/celebrations/c14.jpg"></div>
+        </div>
+
+        <div class="gallery-row reverse">
+            <div class="gallery-img large"><img src="/static/images/portfolio/celebrations/c15.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/celebrations/c16.jpg"></div>
+        </div>
+
+        <div class="gallery-row">
+            <div class="gallery-img large"><img src="/static/images/portfolio/celebrations/c17.jpg"></div>
+            <div class="gallery-img small"><img src="/static/images/portfolio/celebrations/c18.jpg"></div>
+        </div>
+
+        <!-- LAST IMAGE FULL -->
+        <div class="gallery-row">
+            <div class="gallery-img large"><img src="/static/images/portfolio/celebrations/c19.jpg"></div>
+        </div>
+
+    </div>
+
+</section>
 
 </body>
 </html>
