@@ -1,84 +1,214 @@
-/* ===== KEEP YOUR ORIGINAL CSS TILL CONTACT SECTION ===== */
-/* (everything from your file stays same up to CONTACT section) */
-
-
-/* ================= CLEAN FIXES ================= */
-
-/* HERO FIX (center + no overlap) */
-.hero-content {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 100px;
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
-/* PORTFOLIO FIX */
+:root {
+--color-bg: #0a0a0a;
+--color-bg-alt: #111111;
+--color-text: #e8e4de;
+--color-text-muted: #9a9590;
+--color-accent: #c9a96e;
+--color-accent-light: #dfc598;
+--color-white: #ffffff;
+
+```
+--font-heading: 'Cormorant Garamond', serif;
+--font-body: 'Montserrat', sans-serif;
+```
+
+}
+
+body {
+font-family: var(--font-body);
+background: var(--color-bg);
+color: var(--color-text);
+}
+
+/* ===== NAVBAR (RESTORED) ===== */
+.navbar {
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+}
+
+.nav-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 40px;
+}
+
+.nav-logo {
+font-family: var(--font-heading);
+font-size: 1.5rem;
+}
+
+.nav-menu {
+display: flex;
+gap: 30px;
+list-style: none;
+}
+
+.nav-link {
+font-size: 0.8rem;
+letter-spacing: 2px;
+}
+
+/* ===== HERO ===== */
+.hero {
+position: relative;
+height: 100vh;
+}
+
+.hero-parallax {
+position: absolute;
+inset: 0;
+background-size: cover;
+background-position: center;
+}
+
+.hero-overlay {
+position: absolute;
+inset: 0;
+background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 80px;
+}
+
+.hero-text-wrapper {
+text-align: center;
+}
+
+.hero-title {
+font-family: var(--font-heading);
+font-size: 70px;
+}
+
+.hero-tagline {
+font-style: italic;
+margin-top: 10px;
+}
+
+/* ===== ABOUT ===== */
+.about {
+padding: 100px 0;
+}
+
+.about-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+}
+
+/* ===== PORTFOLIO ===== */
+.portfolio {
+padding: 100px 0;
+}
+
 .portfolio-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    margin-top: 60px;
+display: flex;
+flex-direction: column;
+gap: 60px;
 }
 
 .portfolio-item {
-    position: relative;
-    width: 100%;
-    height: 100vh;
+position: relative;
+height: 100vh;
 }
 
 .portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
 .portfolio-overlay {
-    position: absolute;
-    inset: 0;
+position: absolute;
+inset: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+```
+display: flex;
+align-items: center;
+justify-content: center;
 
-    background: rgba(0,0,0,0.35);
+background: rgba(0,0,0,0.4);
+```
+
 }
 
 .portfolio-text {
-    text-align: center;
+text-align: center;
 }
 
-/* TIMELESS TEXT CENTER */
-.parallax-content {
-    top: 50%;
-    transform: translateY(-50%);
+/* ===== TESTIMONIALS ===== */
+.testimonials {
+padding: 100px 0;
 }
 
-/* TESTIMONIAL FIX */
-.carousel-arrow svg {
-    margin: 0 !important;
+.testimonials-carousel {
+display: flex;
+align-items: center;
 }
 
-/* CONTACT FIX */
+.carousel-track {
+display: flex;
+gap: 20px;
+}
+
+.testimonial-card {
+flex: 0 0 48%;
+padding: 40px;
+border: 1px solid #333;
+}
+
+.carousel-arrow {
+width: 50px;
+height: 50px;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+padding: 100px 0;
+}
+
 .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
 }
 
-/* MOBILE FIXES */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
+.nav-menu {
+display: none;
+}
 
-    .testimonial-card {
-        flex: 0 0 100%;
-    }
+```
+.portfolio-item {
+    height: 60vh;
+}
 
-    .carousel-arrow {
-        display: none;
-    }
+.testimonial-card {
+    flex: 0 0 100%;
+}
 
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
+.carousel-arrow {
+    display: none;
+}
+
+.contact-grid {
+    grid-template-columns: 1fr;
+}
+```
+
 }
